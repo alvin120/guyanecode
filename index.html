@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Découvrez la Guyane - Lieux Touristiques Incontournables</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="translations.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header id="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">🌿 Guyane Découverte</div>
+                <button type="button" class="burger" id="burger-menu" aria-label="Ouvrir le menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <nav id="main-nav">
+                    <ul>
+                        <li><a href="#accueil" data-i18n="nav.home">Accueil</a></li>
+                        <li><a href="#destinations" data-i18n="nav.destinations">Destinations</a></li>
+                        <li><a href="#infos" data-i18n="nav.infos">Infos Pratiques</a></li>
+                        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="lang-switcher">
+                    <button type="button" class="lang-btn active" data-lang="fr" onclick="setLanguage('fr')" title="Français">🇫🇷</button>
+                    <button type="button" class="lang-btn" data-lang="en" onclick="setLanguage('en')" title="English">🇬🇧</button>
+                    <button type="button" class="lang-btn" data-lang="es" onclick="setLanguage('es')" title="Español">🇪🇸</button>
+                    <button type="button" class="lang-btn" data-lang="pt" onclick="setLanguage('pt')" title="Português">🇧🇷</button>
+                    <button type="button" class="lang-btn" data-lang="nl" onclick="setLanguage('nl')" title="Nederlands">🇳🇱</button>
+                    <button type="button" class="lang-btn" data-lang="de" onclick="setLanguage('de')" title="Deutsch">🇩🇪</button>
+                    <button type="button" class="lang-btn" data-lang="it" onclick="setLanguage('it')" title="Italiano">🇮🇹</button>
+                    <button type="button" class="lang-btn" data-lang="zh" onclick="setLanguage('zh')" title="中文">🇨🇳</button>
+                    <button type="button" class="lang-btn" data-lang="ja" onclick="setLanguage('ja')" title="日本語">🇯🇵</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <h1 data-i18n="hero.title">Découvrez la Guyane Française</h1>
+            <p data-i18n="hero.subtitle">Une aventure unique au cœur de l'Amazonie, entre biodiversité exceptionnelle, cultures métissées et conquête spatiale</p>
+            <a href="#destinations" class="cta-button" data-i18n="hero.cta">Explorer les Destinations</a>
+        </div>
+    </section>
+
+    <!-- Wave hero bottom -->
+    <div class="wave-hero">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#0d1f3c"/>
+        </svg>
+    </div>
+
+    <!-- Carousel -->
+    <section class="carousel-section" aria-label="Galerie de la Guyane">
+        <div class="carousel" id="main-carousel">
+            <div class="carousel-track" id="carousel-track">
+                <div class="carousel-slide active">
+                    <img src="./img/image6.jpg" alt="Centre Spatial Guyanais" loading="lazy">
+                    <div class="carousel-caption">
+                        <h3 data-i18n="car.1.title">🚀 Centre Spatial Guyanais</h3>
+                        <p data-i18n="car.1.desc">Le port spatial de l'Europe au cœur de l'Amazonie</p>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="./img/image8.jpg" alt="Îles du Salut" loading="lazy">
+                    <div class="carousel-caption">
+                        <h3 data-i18n="car.2.title">🏝️ Îles du Salut</h3>
+                        <p data-i18n="car.2.desc">Histoire et nature aux portes de Kourou</p>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="./img/amazonie1.jpg" alt="Parc Amazonien de Guyane" loading="lazy">
+                    <div class="carousel-caption">
+                        <h3 data-i18n="car.3.title">🦋 Parc Amazonien de Guyane</h3>
+                        <p data-i18n="car.3.desc">Le plus grand parc national français — 34% du territoire</p>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="./img/cayenne2.jpg" alt="Cayenne" loading="lazy">
+                    <div class="carousel-caption">
+                        <h3 data-i18n="car.4.title">🏙️ Cayenne</h3>
+                        <p data-i18n="car.4.desc">La capitale créole aux cultures métissées</p>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="./img/saintlaurent.jpg" alt="Saint-Laurent-du-Maroni" loading="lazy">
+                    <div class="carousel-caption">
+                        <h3 data-i18n="car.5.title">🏛️ Saint-Laurent-du-Maroni</h3>
+                        <p data-i18n="car.5.desc">Porte d'entrée vers les cultures du fleuve Maroni</p>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="./img/kourou.jpg" alt="Tortues Luth" loading="lazy">
+                    <div class="carousel-caption">
+                        <h3 data-i18n="car.6.title">🐢 Tortues Luth</h3>
+                        <p data-i18n="car.6.desc">Un spectacle naturel unique — d'avril à août</p>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="carousel-btn carousel-prev" id="carousel-prev" aria-label="Précédent">&#8249;</button>
+            <button type="button" class="carousel-btn carousel-next" id="carousel-next" aria-label="Suivant">&#8250;</button>
+            <div class="carousel-dots" id="carousel-dots"></div>
+        </div>
+    </section>
+
+    <!-- Wave carousel bottom -->
+    <div class="wave-section">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,40 C480,0 960,80 1440,40 L1440,80 L0,80 Z" fill="#f7f8fc"/>
+        </svg>
+    </div>
+
+    <!-- Section Statistiques -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="96">0</div>
+                    <div class="stat-unit">%</div>
+                    <div class="stat-label">de forêt tropicale</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="700">0</div>
+                    <div class="stat-unit">+</div>
+                    <div class="stat-label">espèces d'oiseaux</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="34">0</div>
+                    <div class="stat-unit">%</div>
+                    <div class="stat-label">du territoire = Parc Amazonien</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="80">0</div>
+                    <div class="stat-unit">+</div>
+                    <div class="stat-label">langues parlées</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Expériences -->
+    <section class="experiences-section">
+        <div class="container">
+            <h2 class="section-title-center">Vivez des Expériences Uniques</h2>
+            <p class="section-subtitle">La Guyane, entre aventure, culture et découverte spatiale</p>
+            <div class="experiences-grid">
+                <div class="exp-card exp-nature">
+                    <div class="exp-icon">🌿</div>
+                    <h3>Nature & Forêt</h3>
+                    <p>Plongez au cœur de la forêt amazonienne, l'une des plus riches biodiversités de la planète.</p>
+                </div>
+                <div class="exp-card exp-espace">
+                    <div class="exp-icon">🚀</div>
+                    <h3>Conquête Spatiale</h3>
+                    <p>Assistez au lancement de fusées depuis le port spatial de l'Europe à Kourou.</p>
+                </div>
+                <div class="exp-card exp-culture">
+                    <div class="exp-icon">🪶</div>
+                    <h3>Cultures & Peuples</h3>
+                    <p>Rencontrez les communautés amérindiennes, bushinengues et créoles aux traditions uniques.</p>
+                </div>
+                <div class="exp-card exp-faune">
+                    <div class="exp-icon">🐢</div>
+                    <h3>Faune Sauvage</h3>
+                    <p>Jaguars, tortues luth, aigles harpies... une faune exceptionnelle à observer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="main-content">
+        <div class="container">
+            <section id="destinations" class="section">
+                <h2 data-i18n="sec.destinations">Destinations Incontournables</h2>
+                <div class="destinations-grid">
+
+                    <div class="destination-card" onclick="openModal('kourou')">
+                        <div class="card-image"><img src="./img/image6.jpg" alt="Kourou Centre Spatial"><div class="card-overlay"><span>Découvrir →</span></div></div>
+                        <div class="card-content">
+                            <h3 data-i18n="card.kourou.title">🚀 Kourou - Centre Spatial Guyanais</h3>
+                            <p data-i18n="card.kourou.desc">Assistez au lancement des fusées Ariane depuis le port spatial de l'Europe. Une expérience unique au monde qui combine technologie de pointe et paysages tropicaux.</p>
+                            <div class="card-tags">
+                                <span class="tag" data-i18n="card.kourou.tag1">Espace</span>
+                                <span class="tag" data-i18n="card.kourou.tag2">Science</span>
+                                <span class="tag" data-i18n="card.kourou.tag3">Unique</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="destination-card" onclick="openModal('iles-salut')">
+                        <div class="card-image"><img src="./img/image8.jpg" alt="Îles du Salut"><div class="card-overlay"><span>Découvrir →</span></div></div>
+                        <div class="card-content">
+                            <h3 data-i18n="card.iles.title">🏝️ Îles du Salut</h3>
+                            <p data-i18n="card.iles.desc">Découvrez l'histoire du célèbre bagne et l'île du Diable. Ces îles offrent également de magnifiques plages et une nature préservée à seulement 1h de bateau de Kourou.</p>
+                            <div class="card-tags">
+                                <span class="tag" data-i18n="card.iles.tag1">Histoire</span>
+                                <span class="tag" data-i18n="card.iles.tag2">Plages</span>
+                                <span class="tag" data-i18n="card.iles.tag3">Nature</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="destination-card" onclick="openModal('saint-laurent')">
+                        <div class="card-image"><img src="./img/saintlaurent.jpg" alt="Saint-Laurent-du-Maroni"><div class="card-overlay"><span>Découvrir →</span></div></div>
+                        <div class="card-content">
+                            <h3 data-i18n="card.sl.title">🏛️ Saint-Laurent-du-Maroni</h3>
+                            <p data-i18n="card.sl.desc">Ancienne ville pénitentiaire sur les rives du Maroni, frontière naturelle avec le Suriname. Découvrez l'histoire du bagne et la culture bushinengue.</p>
+                            <div class="card-tags">
+                                <span class="tag" data-i18n="card.sl.tag1">Histoire</span>
+                                <span class="tag" data-i18n="card.sl.tag2">Culture</span>
+                                <span class="tag" data-i18n="card.sl.tag3">Fleuve</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="destination-card" onclick="openModal('parc-amazonien')">
+                        <div class="card-image"><img src="./img/amazonie1.jpg" alt="Parc Amazonien"><div class="card-overlay"><span>Découvrir →</span></div></div>
+                        <div class="card-content">
+                            <h3 data-i18n="card.parc.title">🦋 Parc Amazonien de Guyane</h3>
+                            <p data-i18n="card.parc.desc">Le plus grand parc national français couvre 40% du territoire guyanais. Une biodiversité exceptionnelle avec plus de 5 500 espèces végétales et 1 200 espèces animales.</p>
+                            <div class="card-tags">
+                                <span class="tag" data-i18n="card.parc.tag1">Biodiversité</span>
+                                <span class="tag" data-i18n="card.parc.tag2">Trekking</span>
+                                <span class="tag" data-i18n="card.parc.tag3">Écotourisme</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="destination-card" onclick="openModal('cayenne')">
+                        <div class="card-image"><img src="./img/cayenne2.jpg" alt="Cayenne"><div class="card-overlay"><span>Découvrir →</span></div></div>
+                        <div class="card-content">
+                            <h3 data-i18n="card.cayenne.title">🏙️ Cayenne</h3>
+                            <p data-i18n="card.cayenne.desc">La capitale créole avec son marché coloré, ses maisons coloniales et sa place des Palmistes. Point de départ idéal pour découvrir la gastronomie et l'artisanat local.</p>
+                            <div class="card-tags">
+                                <span class="tag" data-i18n="card.cayenne.tag1">Capitale</span>
+                                <span class="tag" data-i18n="card.cayenne.tag2">Gastronomie</span>
+                                <span class="tag" data-i18n="card.cayenne.tag3">Shopping</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="destination-card" onclick="openModal('tortues-luth')">
+                        <div class="card-image"><img src="./img/kourou.jpg" alt="Tortues Luth"><div class="card-overlay"><span>Découvrir →</span></div></div>
+                        <div class="card-content">
+                            <h3 data-i18n="card.tortues.title">🐢 Plages des Tortues Luth</h3>
+                            <p data-i18n="card.tortues.desc">Entre avril et août, observez la ponte des tortues luth sur les plages d'Awala-Yalimapo et de Montjoly. Un spectacle naturel émouvant et rare.</p>
+                            <div class="card-tags">
+                                <span class="tag" data-i18n="card.tortues.tag1">Faune</span>
+                                <span class="tag" data-i18n="card.tortues.tag2">Saisonnier</span>
+                                <span class="tag" data-i18n="card.tortues.tag3">Protection</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="infos" class="section">
+                <h2 data-i18n="sec.infos">Informations Pratiques</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3 data-i18n="info.metro.title">✈️ Depuis la métropole</h3>
+                        <p data-i18n-html="info.metro.text">Vol direct depuis Paris (8h30) avec Air France ou Air Caraïbes. Aucun visa requis - la Guyane est un département français d'outre-mer.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3 data-i18n="info.caraibes.title">✈️ Depuis les Caraïbes</h3>
+                        <p data-i18n-html="info.caraibes.text">Martinique : Air France propose jusqu'à deux vols directs quotidiens entre Fort de France et Cayenne.<br>Guadeloupe : Air France assure jusqu'à 2 liaisons quotidiennes en vol direct (avec escale à Fort de France) depuis Pointe à Pitre.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3 data-i18n="info.bresil.title">✈️ Depuis le Brésil</h3>
+                        <p data-i18n-html="info.bresil.text">Brésil : Air France assure une liaison directe entre Cayenne et les villes de Belém (Nord-Est) et Fortaleza, à raison d'un vol hebdomadaire pour chacune.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3 data-i18n="info.saison.title">🌡️ Meilleure période</h3>
+                        <p data-i18n-html="info.saison.text">Saison sèche d'août à novembre. Pour les tortues luth : avril à août. Évitez mars-juillet (saison des pluies).</p>
+                    </div>
+                    <div class="info-card">
+                        <h3 data-i18n="info.budget.title">💰 Monnaie & Budget</h3>
+                        <p data-i18n-html="info.budget.text">Euro (€). Budget moyen : 80-120€/jour/personne. Coût de la vie similaire à la métropole, transport et hébergement plus chers.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3 data-i18n="info.sante.title">🏥 Santé</h3>
+                        <p data-i18n-html="info.sante.text">Vaccins obligatoires : fièvre jaune. Recommandés : hépatites A/B, typhoïde. Protection anti-moustiques indispensable.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Modales -->
+    <div id="kourou" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('kourou')">&times;</span>
+            <h2 data-i18n="modal.kourou.title">🚀 Centre Spatial Guyanais - Kourou</h2>
+            <p><strong data-i18n="modal.kourou.subtitle">Le port spatial de l'Europe</strong></p>
+            <p data-i18n="modal.kourou.desc">Le Centre Spatial Guyanais (CSG) est un site de lancement spatial français situé près de Kourou. C'est le principal port spatial utilisé par l'Agence spatiale européenne (ESA).</p>
+            <h3 data-i18n="modal.kourou.h3_todo">À voir et à faire :</h3>
+            <ul style="margin:1rem 0;padding-left:2rem">
+                <li data-i18n="modal.kourou.li1">🎫 Visite guidée du CSG (réservation obligatoire)</li>
+                <li data-i18n="modal.kourou.li2">🚀 Assister à un lancement de fusée Ariane 5 ou Vega</li>
+                <li data-i18n="modal.kourou.li3">🏛️ Musée de l'Espace</li>
+                <li data-i18n="modal.kourou.li4">🌴 Plages de Kourou</li>
+                <li data-i18n="modal.kourou.li5">🦋 Zoo de Guyane (30 min de route)</li>
+            </ul>
+            <h3 data-i18n="modal.kourou.h3_info">Infos pratiques :</h3>
+            <p data-i18n-html="modal.kourou.infos"><strong>Accès :</strong> 50 km de Cayenne (1h de route)<br><strong>Hébergement :</strong> Hôtels et gîtes dans le centre-ville<br><strong>Réservations :</strong> Les visites du CSG doivent être réservées à l'avance sur le site officiel</p>
+        </div>
+    </div>
+
+    <div id="iles-salut" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('iles-salut')">&times;</span>
+            <h2 data-i18n="modal.iles.title">🏝️ Îles du Salut</h2>
+            <p><strong data-i18n="modal.iles.subtitle">Histoire et nature aux portes de Kourou</strong></p>
+            <p data-i18n="modal.iles.desc">Archipel de trois îles : l'Île Royale, l'Île Saint-Joseph et l'Île du Diable. Ancien site du bagne de Guyane, ces îles offrent aujourd'hui un mélange unique d'histoire et de nature tropicale.</p>
+            <h3 data-i18n="modal.iles.h3_todo">À découvrir :</h3>
+            <ul style="margin:1rem 0;padding-left:2rem">
+                <li data-i18n="modal.iles.li1">🏛️ Vestiges du bagne sur l'Île Royale</li>
+                <li data-i18n="modal.iles.li2">⛪ Chapelle et cimetière des bagnards</li>
+                <li data-i18n="modal.iles.li3">🏖️ Plages de sable blanc</li>
+                <li data-i18n="modal.iles.li4">🐒 Observation des singes écureuils</li>
+                <li data-i18n="modal.iles.li5">🦅 Oiseaux tropicaux</li>
+                <li data-i18n="modal.iles.li6">🤿 Snorkeling dans les eaux cristallines</li>
+            </ul>
+            <h3 data-i18n="modal.iles.h3_info">Infos pratiques :</h3>
+            <p data-i18n-html="modal.iles.infos"><strong>Accès :</strong> Bateau depuis Kourou (45 min)<br><strong>Durée :</strong> Excursion à la journée ou séjour d'une nuit<br><strong>Hébergement :</strong> Auberge des Îles du Salut (réservation conseillée)</p>
+        </div>
+    </div>
+
+    <div id="saint-laurent" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('saint-laurent')">&times;</span>
+            <h2 data-i18n="modal.sl.title">🏛️ Saint-Laurent-du-Maroni</h2>
+            <p><strong data-i18n="modal.sl.subtitle">Porte d'entrée vers les cultures du fleuve</strong></p>
+            <p data-i18n="modal.sl.desc">Deuxième ville de Guyane, Saint-Laurent est située sur les rives du Maroni qui forme la frontière avec le Suriname. Riche en histoire pénitentiaire et en diversité culturelle.</p>
+            <h3 data-i18n="modal.sl.h3_todo">Sites d'intérêt :</h3>
+            <ul style="margin:1rem 0;padding-left:2rem">
+                <li data-i18n="modal.sl.li1">🏛️ Camp de la Transportation (ancien bagne)</li>
+                <li data-i18n="modal.sl.li2">🏛️ Musée du Bagne</li>
+                <li data-i18n="modal.sl.li3">🛶 Excursions sur le fleuve Maroni</li>
+                <li data-i18n="modal.sl.li4">🎭 Rencontres avec les communautés bushinengues</li>
+                <li data-i18n="modal.sl.li5">🏛️ Architecture coloniale du centre-ville</li>
+                <li data-i18n="modal.sl.li6">🌅 Couchers de soleil sur le Maroni</li>
+            </ul>
+            <h3 data-i18n="modal.sl.h3_info">Infos pratiques :</h3>
+            <p data-i18n-html="modal.sl.infos"><strong>Accès :</strong> 250 km de Cayenne (3h30 de route)<br><strong>Hébergement :</strong> Hôtels, gîtes et carbets traditionnels<br><strong>À savoir :</strong> Possibilité d'excursions au Suriname (passeport requis)</p>
+        </div>
+    </div>
+
+    <div id="parc-amazonien" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('parc-amazonien')">&times;</span>
+            <h2 data-i18n="modal.parc.title">🦋 Parc Amazonien de Guyane</h2>
+            <p><strong data-i18n="modal.parc.subtitle">Le plus grand parc national de France</strong></p>
+            <p data-i18n="modal.parc.desc">Créé en 2007, ce parc protège 34% du territoire guyanais. Il abrite une biodiversité exceptionnelle et des communautés amérindiennes et bushinengues.</p>
+            <h3 data-i18n="modal.parc.h3_todo">Activités possibles :</h3>
+            <ul style="margin:1rem 0;padding-left:2rem">
+                <li data-i18n="modal.parc.li1">🥾 Randonnées sur les sentiers balisés</li>
+                <li data-i18n="modal.parc.li2">🛶 Navigation sur les fleuves</li>
+                <li data-i18n="modal.parc.li3">🦅 Observation de la faune et de la flore</li>
+                <li data-i18n="modal.parc.li4">🏕️ Séjours en carbets écologiques</li>
+                <li data-i18n="modal.parc.li5">📚 Rencontres avec les communautés locales</li>
+                <li data-i18n="modal.parc.li6">📸 Photographie de nature</li>
+            </ul>
+            <h3 data-i18n="modal.parc.h3_info">Infos pratiques :</h3>
+            <p data-i18n-html="modal.parc.infos"><strong>Accès :</strong> Plusieurs entrées, principalement depuis Saül ou Maripasoula<br><strong>Encadrement :</strong> Guide obligatoire pour certaines zones<br><strong>Équipement :</strong> Prévoir équipement de randonnée et protection anti-moustiques</p>
+        </div>
+    </div>
+
+    <div id="cayenne" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('cayenne')">&times;</span>
+            <h2 data-i18n="modal.cayenne.title">🏙️ Cayenne</h2>
+            <p><strong data-i18n="modal.cayenne.subtitle">La capitale créole de la Guyane</strong></p>
+            <p data-i18n="modal.cayenne.desc">Chef-lieu de la Guyane française, Cayenne mélange architecture coloniale, influences créoles et modernité. C'est le cœur économique et culturel du département.</p>
+            <h3 data-i18n="modal.cayenne.h3_todo">Incontournables :</h3>
+            <ul style="margin:1rem 0;padding-left:2rem">
+                <li data-i18n="modal.cayenne.li1">🏛️ Place des Palmistes et ses palmiers royaux</li>
+                <li data-i18n="modal.cayenne.li2">🏪 Marché de Cayenne (fruits exotiques, épices)</li>
+                <li data-i18n="modal.cayenne.li3">⛪ Cathédrale Saint-Sauveur</li>
+                <li data-i18n="modal.cayenne.li4">🏛️ Musée Alexandre-Franconie</li>
+                <li data-i18n="modal.cayenne.li5">🌶️ Découverte de la cuisine guyanaise</li>
+                <li data-i18n="modal.cayenne.li6">🌅 Fort Cépérou et sa vue panoramique</li>
+                <li data-i18n="modal.cayenne.li7">🏖️ Plage de Montjoly (15 min du centre)</li>
+            </ul>
+            <h3 data-i18n="modal.cayenne.h3_info">Infos pratiques :</h3>
+            <p data-i18n-html="modal.cayenne.infos"><strong>Hébergement :</strong> Large choix d'hôtels et locations<br><strong>Transport :</strong> Location de voiture recommandée<br><strong>Shopping :</strong> Centre commercial et boutiques artisanales</p>
+        </div>
+    </div>
+
+    <div id="tortues-luth" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('tortues-luth')">&times;</span>
+            <h2 data-i18n="modal.tortues.title">🐢 Observation des Tortues Luth</h2>
+            <p><strong data-i18n="modal.tortues.subtitle">Un spectacle naturel extraordinaire</strong></p>
+            <p data-i18n="modal.tortues.desc">La Guyane accueille la plus importante population de tortues luth au monde. Ces géantes des mers viennent pondre sur les plages guyanaises d'avril à août.</p>
+            <h3 data-i18n="modal.tortues.h3_todo">Sites d'observation :</h3>
+            <ul style="margin:1rem 0;padding-left:2rem">
+                <li data-i18n="modal.tortues.li1">🏖️ Plage d'Awala-Yalimapo (site principal)</li>
+                <li data-i18n="modal.tortues.li2">🏖️ Plage de Montjoly</li>
+                <li data-i18n="modal.tortues.li3">🏖️ Plage de Rémire-Montjoly</li>
+                <li data-i18n="modal.tortues.li4">🌙 Sorties nocturnes encadrées</li>
+                <li data-i18n="modal.tortues.li5">👶 Observation des éclosions (juillet-septembre)</li>
+                <li data-i18n="modal.tortues.li6">📚 Sensibilisation à la protection</li>
+            </ul>
+            <h3 data-i18n="modal.tortues.h3_info">Infos pratiques :</h3>
+            <p data-i18n-html="modal.tortues.infos"><strong>Saison :</strong> Avril à août pour la ponte, juillet à septembre pour les éclosions<br><strong>Réservation :</strong> Obligatoire pour les sorties encadrées<br><strong>Respect :</strong> Observation silencieuse et à distance, pas de flash photo</p>
+        </div>
+    </div>
+
+    <!-- Agent IA Chatbot -->
+    <div id="ai-chat-widget">
+        <button type="button" id="chat-toggle-btn" aria-label="Ouvrir l'assistant IA">
+            <span class="chat-icon">🤖</span>
+            <span class="chat-close-icon">✕</span>
+            <span class="chat-notif-badge">1</span>
+        </button>
+        <div id="chat-window">
+            <div class="chat-header">
+                <div class="chat-header-info">
+                    <div class="chat-avatar">🌿</div>
+                    <div>
+                        <div class="chat-name" data-i18n="chat.name">Guide IA Guyane</div>
+                        <div class="chat-status" data-i18n="chat.status">En ligne</div>
+                    </div>
+                </div>
+                <button type="button" class="chat-close-btn" id="chat-close-btn">✕</button>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <div class="chat-msg bot">
+                    <div class="msg-bubble" id="chat-welcome-msg" data-i18n-html="chat.welcome">Bonjour ! Je suis votre guide virtuel de la <strong>Guyane Française</strong> 🌿<br>Je connais tout sur ce territoire : destinations, histoire, faune, peuples, culture, carnaval, vols, santé, budget... Posez-moi n'importe quelle question !</div>
+                    <div class="msg-time">maintenant</div>
+                </div>
+                <div class="chat-suggestions" id="chat-suggestions">
+                    <button type="button" class="suggestion-chip" data-i18n="chip.1" data-question-key="chip.1q">🗺️ Destinations</button>
+                    <button type="button" class="suggestion-chip" data-i18n="chip.2" data-question-key="chip.2q">📜 Histoire</button>
+                    <button type="button" class="suggestion-chip" data-i18n="chip.3" data-question-key="chip.3q">🦁 Faune</button>
+                    <button type="button" class="suggestion-chip" data-i18n="chip.4" data-question-key="chip.4q">🪶 Peuples</button>
+                    <button type="button" class="suggestion-chip" data-i18n="chip.5" data-question-key="chip.5q">🎭 Carnaval</button>
+                    <button type="button" class="suggestion-chip" data-i18n="chip.6" data-question-key="chip.6q">✈️ Vols</button>
+                    <button type="button" class="suggestion-chip" data-i18n="chip.7" data-question-key="chip.7q">💰 Budget</button>
+                    <button type="button" class="suggestion-chip" data-i18n="chip.8" data-question-key="chip.8q">🏥 Santé</button>
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" data-i18n-placeholder="chat.placeholder" placeholder="Posez votre question..." autocomplete="off" />
+                <button type="button" id="chat-send-btn" onclick="sendMessage()">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 data-i18n="footer.plan.title">🗺️ Planifiez votre voyage</h4>
+                    <a href="https://wwws.airfrance.fr/search/advanced" data-i18n="footer.plan.link1">Réserver un vol</a>
+                    <a href="https://www.maisondevacances.fr/search/53d620572e8f1" data-i18n="footer.plan.link2">Trouver un hébergement</a>
+                    <a href="https://www.kayak.fr/Guyane-francaise-Locations-de-voiture.83.crc.html" data-i18n="footer.plan.link3">Location de voiture</a>
+                    <a href="https://www.guides-guyane.com/" data-i18n="footer.plan.link4">Guides locaux</a>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="footer.contact.title">📞 Contacts utiles</h4>
+                    <a href="https://www.guyane-amazonie.fr/" data-i18n="footer.contact.link1">Office de tourisme de Guyane</a>
+                    <a href="https://centrespatialguyanais.cnes.fr/fr" data-i18n="footer.contact.link2">Centre Spatial Guyanais</a>
+                    <a href="https://www.parc-amazonien-guyane.fr/fr" data-i18n="footer.contact.link3">Parc Amazonien</a>
+                    <a href="https://www.guyane.gouv.fr/Prendre-rendez-vous" data-i18n="footer.contact.link4">Préfecture de Guyane</a>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="footer.links.title">🌐 Liens utiles</h4>
+                    <a href="https://meteofrance.gf/fr" data-i18n="footer.links.link1">Météo Guyane</a>
+                    <a href="https://sante.gouv.fr/prevention-en-sante/sante-des-populations/article/recommandations-sanitaires-pour-les-voyageurs" data-i18n="footer.links.link2">Conseils aux voyageurs</a>
+                    <a href="https://www.guyane.gouv.fr/Actions-de-l-Etat/Sante-et-prevention/La-fievre-jaune" data-i18n="footer.links.link3">Vaccination internationale</a>
+                    <a href="https://www.ctguyane.fr/direction-des-transports/" data-i18n="footer.links.link4">Transport en Guyane</a>
+                </div>
+            </div>
+            <p data-i18n="footer.copy">© 2025 Guyane Découverte - Explorez l'Amazonie française</p>
+        </div>
+    </footer>
+</body>
+</html>
