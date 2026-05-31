@@ -1,49 +1,5 @@
 
         document.addEventListener('DOMContentLoaded', function() {
-
-    // ===== HEADER SCROLL EFFECT =====
-    const mainHeader = document.getElementById('main-header');
-    function handleHeaderScroll() {
-        if (window.scrollY > 60) {
-            mainHeader.classList.add('scrolled');
-        } else {
-            mainHeader.classList.remove('scrolled');
-        }
-    }
-    window.addEventListener('scroll', handleHeaderScroll, { passive: true });
-    handleHeaderScroll();
-
-    // ===== ANIMATED COUNTERS =====
-    function animateCounter(el, target, duration) {
-        let start = 0;
-        const step = target / (duration / 16);
-        const tick = () => {
-            start += step;
-            if (start >= target) {
-                el.textContent = target;
-                return;
-            }
-            el.textContent = Math.floor(start);
-            requestAnimationFrame(tick);
-        };
-        requestAnimationFrame(tick);
-    }
-
-    const statsObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const counters = entry.target.querySelectorAll('.stat-number[data-target]');
-                counters.forEach(el => {
-                    animateCounter(el, parseInt(el.dataset.target), 1400);
-                });
-                statsObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.4 });
-
-    const statsSection = document.querySelector('.stats-section');
-    if (statsSection) statsObserver.observe(statsSection);
-
     const burger = document.getElementById('burger-menu');
     const nav = document.getElementById('main-nav');
     

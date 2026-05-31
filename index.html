@@ -6,13 +6,13 @@
     <title>Découvrez la Guyane - Lieux Touristiques Incontournables</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script src="translations.js"></script>
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css?v=orig">
+    <script src="translations.js?v=orig"></script>
+    <script src="script.js?v=orig" defer></script>
 </head>
 
 <body>
-    <header id="main-header">
+    <header>
         <div class="container">
             <div class="header-content">
                 <div class="logo">🌿 Guyane Découverte</div>
@@ -49,13 +49,6 @@
             <a href="#destinations" class="cta-button" data-i18n="hero.cta">Explorer les Destinations</a>
         </div>
     </section>
-
-    <!-- Wave hero bottom -->
-    <div class="wave-hero">
-        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#0d1f3c"/>
-        </svg>
-    </div>
 
     <!-- Carousel -->
     <section class="carousel-section" aria-label="Galerie de la Guyane">
@@ -110,71 +103,6 @@
         </div>
     </section>
 
-    <!-- Wave carousel bottom -->
-    <div class="wave-section">
-        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0,40 C480,0 960,80 1440,40 L1440,80 L0,80 Z" fill="#f7f8fc"/>
-        </svg>
-    </div>
-
-    <!-- Section Statistiques -->
-    <section class="stats-section">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-number" data-target="96">0</div>
-                    <div class="stat-unit">%</div>
-                    <div class="stat-label">de forêt tropicale</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-target="700">0</div>
-                    <div class="stat-unit">+</div>
-                    <div class="stat-label">espèces d'oiseaux</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-target="34">0</div>
-                    <div class="stat-unit">%</div>
-                    <div class="stat-label">du territoire = Parc Amazonien</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-target="80">0</div>
-                    <div class="stat-unit">+</div>
-                    <div class="stat-label">langues parlées</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section Expériences -->
-    <section class="experiences-section">
-        <div class="container">
-            <h2 class="section-title-center" data-i18n="exp.title">Vivez des Expériences Uniques</h2>
-            <p class="section-subtitle" data-i18n="exp.subtitle">La Guyane, entre aventure, culture et découverte spatiale</p>
-            <div class="experiences-grid">
-                <div class="exp-card exp-nature">
-                    <div class="exp-icon">🌿</div>
-                    <h3 data-i18n="exp.nature.title">Nature & Forêt</h3>
-                    <p data-i18n="exp.nature.desc">Plongez au cœur de la forêt amazonienne, l'une des plus riches biodiversités de la planète.</p>
-                </div>
-                <div class="exp-card exp-espace">
-                    <div class="exp-icon">🚀</div>
-                    <h3 data-i18n="exp.space.title">Conquête Spatiale</h3>
-                    <p data-i18n="exp.space.desc">Assistez au lancement de fusées depuis le port spatial de l'Europe à Kourou.</p>
-                </div>
-                <div class="exp-card exp-culture">
-                    <div class="exp-icon">🪶</div>
-                    <h3 data-i18n="exp.culture.title">Cultures & Peuples</h3>
-                    <p data-i18n="exp.culture.desc">Rencontrez les communautés amérindiennes, bushinengues et créoles aux traditions uniques.</p>
-                </div>
-                <div class="exp-card exp-faune">
-                    <div class="exp-icon">🐢</div>
-                    <h3 data-i18n="exp.wildlife.title">Faune Sauvage</h3>
-                    <p data-i18n="exp.wildlife.desc">Jaguars, tortues luth, aigles harpies... une faune exceptionnelle à observer.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <div class="main-content">
         <div class="container">
             <section id="destinations" class="section">
@@ -182,7 +110,7 @@
                 <div class="destinations-grid">
 
                     <div class="destination-card" onclick="openModal('kourou')">
-                        <div class="card-image"><img src="./img/image6.jpg" alt="Kourou Centre Spatial"><div class="card-overlay"><span>Découvrir →</span></div></div>
+                        <div class="card-image"><img src="./img/image6.jpg" alt="Kourou Centre Spatial"></div>
                         <div class="card-content">
                             <h3 data-i18n="card.kourou.title">🚀 Kourou - Centre Spatial Guyanais</h3>
                             <p data-i18n="card.kourou.desc">Assistez au lancement des fusées Ariane depuis le port spatial de l'Europe. Une expérience unique au monde qui combine technologie de pointe et paysages tropicaux.</p>
@@ -195,7 +123,7 @@
                     </div>
 
                     <div class="destination-card" onclick="openModal('iles-salut')">
-                        <div class="card-image"><img src="./img/image8.jpg" alt="Îles du Salut"><div class="card-overlay"><span>Découvrir →</span></div></div>
+                        <div class="card-image"><img src="./img/image8.jpg" alt="Îles du Salut"></div>
                         <div class="card-content">
                             <h3 data-i18n="card.iles.title">🏝️ Îles du Salut</h3>
                             <p data-i18n="card.iles.desc">Découvrez l'histoire du célèbre bagne et l'île du Diable. Ces îles offrent également de magnifiques plages et une nature préservée à seulement 1h de bateau de Kourou.</p>
@@ -208,7 +136,7 @@
                     </div>
 
                     <div class="destination-card" onclick="openModal('saint-laurent')">
-                        <div class="card-image"><img src="./img/saintlaurent.jpg" alt="Saint-Laurent-du-Maroni"><div class="card-overlay"><span>Découvrir →</span></div></div>
+                        <div class="card-image"><img src="./img/saintlaurent.jpg" alt="Saint-Laurent-du-Maroni"></div>
                         <div class="card-content">
                             <h3 data-i18n="card.sl.title">🏛️ Saint-Laurent-du-Maroni</h3>
                             <p data-i18n="card.sl.desc">Ancienne ville pénitentiaire sur les rives du Maroni, frontière naturelle avec le Suriname. Découvrez l'histoire du bagne et la culture bushinengue.</p>
@@ -221,7 +149,7 @@
                     </div>
 
                     <div class="destination-card" onclick="openModal('parc-amazonien')">
-                        <div class="card-image"><img src="./img/amazonie1.jpg" alt="Parc Amazonien"><div class="card-overlay"><span>Découvrir →</span></div></div>
+                        <div class="card-image"><img src="./img/amazonie1.jpg" alt="Parc Amazonien"></div>
                         <div class="card-content">
                             <h3 data-i18n="card.parc.title">🦋 Parc Amazonien de Guyane</h3>
                             <p data-i18n="card.parc.desc">Le plus grand parc national français couvre 40% du territoire guyanais. Une biodiversité exceptionnelle avec plus de 5 500 espèces végétales et 1 200 espèces animales.</p>
@@ -234,7 +162,7 @@
                     </div>
 
                     <div class="destination-card" onclick="openModal('cayenne')">
-                        <div class="card-image"><img src="./img/cayenne2.jpg" alt="Cayenne"><div class="card-overlay"><span>Découvrir →</span></div></div>
+                        <div class="card-image"><img src="./img/cayenne2.jpg" alt="Cayenne"></div>
                         <div class="card-content">
                             <h3 data-i18n="card.cayenne.title">🏙️ Cayenne</h3>
                             <p data-i18n="card.cayenne.desc">La capitale créole avec son marché coloré, ses maisons coloniales et sa place des Palmistes. Point de départ idéal pour découvrir la gastronomie et l'artisanat local.</p>
@@ -247,7 +175,7 @@
                     </div>
 
                     <div class="destination-card" onclick="openModal('tortues-luth')">
-                        <div class="card-image"><img src="./img/kourou.jpg" alt="Tortues Luth"><div class="card-overlay"><span>Découvrir →</span></div></div>
+                        <div class="card-image"><img src="./img/kourou.jpg" alt="Tortues Luth"></div>
                         <div class="card-content">
                             <h3 data-i18n="card.tortues.title">🐢 Plages des Tortues Luth</h3>
                             <p data-i18n="card.tortues.desc">Entre avril et août, observez la ponte des tortues luth sur les plages d'Awala-Yalimapo et de Montjoly. Un spectacle naturel émouvant et rare.</p>
